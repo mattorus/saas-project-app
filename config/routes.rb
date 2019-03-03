@@ -1,4 +1,8 @@
 Rails.application.routes.draw do  
+  # Ensures projects routes is underneath tenants path
+  resources :tenants do
+    resources :projects
+  end
   resources :members
   get 'home/index'
   root :to => "home#index"
