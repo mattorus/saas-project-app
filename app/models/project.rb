@@ -12,7 +12,6 @@ class Project < ApplicationRecord
     end
   end
 
-  # Placeholder until relationship is done
   def self.by_user_plan_and_tenant(tenant_id, user)
     tenant = Tenant.find(tenant_id)
     if tenant.plan == 'premium'
