@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Ensures projects routes is underneath tenants path
   resources :tenants do
     resources :projects do
-      get 'users', on: :members
+      get 'users', on: :member
       put 'add_user', on: :member
     end
   end
