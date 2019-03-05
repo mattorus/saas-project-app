@@ -84,7 +84,7 @@ $(document).ready(function()
     else
     {
       token = response.id;
-      $form.append($("<input type=\"hidden\" name=\"payment[token]\" />".valueOf(token)));
+      $form.append($("<input type=\"hidden\" name=\"payment[token]\" />").val(token));
       $("[data-stripe=number]").remove();
       $("[data-stripe=cvc]").remove();
       $("[data-stripe=exp-year]").remove();
