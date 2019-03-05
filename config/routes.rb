@@ -1,8 +1,12 @@
 Rails.application.routes.draw do  
+  resources :user_projects
   resources :artifacts
   # Ensures projects routes is underneath tenants path
   resources :tenants do
-    resources :projects
+    resources :projects do
+      get 'users', on: :members
+      put 'add_user', on: :member
+    end
   end
   resources :members
   get 'home/index'
