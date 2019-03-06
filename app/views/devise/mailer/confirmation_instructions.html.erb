@@ -1,6 +1,6 @@
 <p>Greetings, <%= @email %>!</p>
 <p>This is an invitation to create an account on my project management app I created for the Ruby on Rails course I'm taking.</p>
-<p>https://mattorus-saas-app.heroku.com</p>
+<p>https://mattorus-saas-app.herokuapp.com</p>
 <p>You can confirm your account email through the link below:</p>
 
 <p><%= link_to 'Confirm my account', user_confirmation_url(:confirmation_token => @token, locale: I18n.locale) %></p>
