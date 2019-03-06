@@ -59,7 +59,8 @@ class ArtifactsController < ApplicationController
   def destroy
     @artifact.destroy
     respond_to do |format|
-      format.html { redirect_to artifacts_url, notice: 'Artifact was successfully destroyed.' }
+      format.html { redirect_to tenant_project_url(tenant_id: Tenant.current_tenant_id, id: @artifact.project_id),
+                    notice: 'Artifact was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
